@@ -12,7 +12,8 @@ request({url,json:true},(error,{body})=>{
 
     }
     else{
-        callback(undefined,(body.weather[0].description +" through out the day." +" it is currently "+(Math.round(body.main.temp)-273)+" degree C out" +". There is "+body.clouds.all+"% probability of rain"))
+        
+        callback(undefined,(body.weather[0].description +" through out the day." +" it is currently "+(Math.round(body.main.temp)-273)+" degree C out.High today is "+(Math.round(body.main.temp_max)-273)+" with a low of "+(Math.round(body.main.temp_min)-273)+". You will feels like "+(Math.round(body.main.feels_like)-273)+" degree C .There is "+body.clouds.all+"% probability of rain"))
     }
 })
 }
