@@ -28,7 +28,7 @@ app.use(express.static(publicDirPath))
 //setting up rout for hbs template
 app.get('',(req,res)=>{
     res.render('index',{
-        title:"Weather app",
+        title:"Weather",
         name:'Arnab'
 
     })//just only put name of hbs file,2nd arg is object
@@ -36,7 +36,7 @@ app.get('',(req,res)=>{
 //setting up about route
 app.get('/about',(req,res)=>{
     res.render('about',{
-        title:"Weather app",
+        title:"About",
         massege:"I'm Arnab Currently doing my B.Tech CSE from UEM,Jaipur",
         name:"Arnab",
         more:"I'm a Web and AI/ML enthusiast"
@@ -70,7 +70,7 @@ app.get('/weather',(req,res)=>{
 app.get('/help',(req,res)=>{
     res.render('help',{
         massege:"This is help section here you will get all help regurding this app"
-        ,title:"help",
+        ,title:"Help",
         name:'Arnab'
     })
 })
